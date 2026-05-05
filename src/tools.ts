@@ -85,11 +85,13 @@ export const tools = {
       // Filter out null fields so the client only sees what should actually
       // change. Without this, a null field would overwrite the live value
       // with null and break the element.
-      const filtered: Record<string, unknown> = {};
-      for (const [key, value] of Object.entries(updates)) {
-        if (value !== null) filtered[key] = value;
-      }
-      return { elementId, updates: filtered };
+      // const filtered: Record<string, unknown> = {};
+      // for (const [key, value] of Object.entries(updates)) {
+      //   if (value !== null) filtered[key] = value;
+      // }
+      // return { elementId, updates: filtered };
+
+      return { elementId, updates };
     },
   }),
 
